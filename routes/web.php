@@ -56,6 +56,6 @@ Route::group(['middleware' => ['auth']], function () {
  * so that you can register new users. I disabled the registration endpoint so that my hosted demo won't be abused.
  * 
  */
-// Auth::routes();
-Auth::routes(['register' => false]);
+Auth::routes();
+// Auth::routes(['register' => false]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
